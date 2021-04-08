@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-         Bienvenidos a la tienda Disney
+         Bienvenidos a la tienda Disney en React
         </p>
         <a
           className="App-link"
