@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-         Bienvenidos a Coderhouse
+         Bienvenidos a la tienda Disney
         </p>
         <a
           className="App-link"
