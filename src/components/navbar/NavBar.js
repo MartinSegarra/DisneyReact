@@ -1,5 +1,6 @@
-import "../css/NavBar.css";
-import Logo from "../img/logo.png";
+import "./NavBar.css";
+import Logo from "../../img/logo.png";
+import {CartWidget} from '../cartwidget/CartWidget'
 
 export const NavBar = () => {
   return (
@@ -23,6 +24,9 @@ export const NavBar = () => {
             </li>
             <li className="navLink">
               <a href="">Disney+</a>
+            </li>
+            <li className="navLink">
+              <a href="">{CartWidget}</a>
             </li>
           </ul>
         </nav>
