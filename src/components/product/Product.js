@@ -1,5 +1,4 @@
-import './Product.css'
-
+import "./Product.css";
 
 export const Product = (props) => {
   const handleClick = () => alert(`Gracias por clickear en el saludo`);
