@@ -1,6 +1,7 @@
 import React from "react";
 import { NavBar } from "./components/navbar/NavBar";
 import { ItemListContainer } from "./components/itemlistcontainer/ItemListContainer";
+import { ItemCount} from "./components/itemcount/ItemCount";
 import { Wrapper } from "./components/wrapper/Wrapper"
 
 function App() {

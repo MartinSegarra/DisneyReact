@@ -1,0 +1,13 @@
+.ItemCount {
+
+    display: flex;
+    list-style-type: none;
+    padding: 40px 25px;
+  
+  }
+
+  .StockNumber {
+ 
+    margin: 40px;
+    
+  } 
