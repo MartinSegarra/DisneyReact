@@ -22,10 +22,14 @@ export const ItemCount = ({ stock, initial }) => {
 
   return (
     <div className="ItemCount">
-      <button className= 'AddSubstractButtons' onClick={onSubstract}>-</button>
+      <button className="AddSubstractButtons" onClick={onSubstract}>
+        -
+      </button>
       <p className="StockNumber">{number}</p>
-      <button className= 'AddSubstractButtons' onClick={onAdd}>+</button>
-      <p className="StockNumber" >Stock disponible: {stock}</p>
+      <button className="AddSubstractButtons" onClick={onAdd}>
+        +
+      </button>
+      <p className="StockNumber">Stock disponible: {stock}</p>
     </div>
   );
 };
