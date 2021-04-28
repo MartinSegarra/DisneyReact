@@ -1,12 +1,14 @@
 import "./ItemListContainer.css";
 import { Product } from "../product/Product";
-import { ItemCount } from "../itemcount/ItemCount";
+
+import { ItemList } from "../itemlist/ItemList";
 
 export const ItemListContainer = (props) => {
+  
   return (
     <div className="ItemListContainer">
-      <Product greeting={props.greeting} />
-      <ItemCount stock={5} initial={1} />
+      <h1>{props.greeting}</h1>
+      <ItemList/>
     </div>
   );
 };

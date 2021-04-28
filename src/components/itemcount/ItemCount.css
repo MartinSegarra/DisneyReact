@@ -3,11 +3,18 @@
     display: flex;
     list-style-type: none;
     padding: 40px 25px;
+    align-items: center;
+    justify-content: center;
   
   }
 
   .StockNumber {
  
     margin: 40px;
+    align-items: center;
     
   } 
+
+  .AddSubstractButtons {
+    text-align: center;
+  }
