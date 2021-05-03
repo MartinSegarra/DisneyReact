@@ -2,3 +2,7 @@
     padding: 30px;
     text-align: center;
 }
+
+body {
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+  }

@@ -1,4 +1,14 @@
+  
 .Item {
     text-align: center;
-    margin-top: 70px;
+
+    box-sizing: border-box;
+	padding: 20px;
+	outline: 2px solid black;
+	flex: 1;
+    margin: 5px 5px;
+    width:auto;
+    height: auto;
+    
+   
 }

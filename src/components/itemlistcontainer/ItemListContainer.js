@@ -7,7 +7,7 @@ export const ItemListContainer = (props) => {
   
   return (
     <div className="ItemListContainer">
-      <h1>{props.greeting}</h1>
+      <h1>Bienvenidos a Disney Store</h1>
       <ItemList/>
     </div>
   );

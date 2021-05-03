@@ -1,57 +1,36 @@
 import "./ItemList.css";
 import { useState } from "react";
 import { Item } from "../item/Item";
+import { ProductList } from "../productlist/ProductList";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 
 export const ItemList = () => {
-  const peliculas = [
-    {
-      id: 1,
-      title: "The Little Mermaid - 4K Blu-Ray",
-      description: "Blu-Ray en formato 4K",
-      price: 2500,
-      image: "little-mermaid.png",
-      stock: 3,
-    },
-    {
-      id: 2,
-      title: "Beauty and the Beast - 4K Blu-Ray",
-      description: "Blu-Ray en formato 4K",
-      price: 2700,
-      image: "beauty-beast.png",
-      stock: 4
-    },
-    {
-      id: 3,
-      title: "The Lion King - 4K Blu-Ray",
-      description: "Blu-Ray en formato 4K",
-      price: 2800,
-      image: "lion-king.png",
-      stock: 5,
-    },
-  ];
+  let { categoryId } = useParams();
 
-  const [listaPeliculas, setListaPeliculas] = useState([]);
+  const [listaProductos, setListaProductos] = useState([]);
 
-  const catalogoPeliculas = async () => {
-    try {
-      setTimeout(() => {
-        setListaPeliculas(peliculas);
-      }, 2000)
-    } catch {
-      setListaPeliculas("Ha ocurrido un error. Inténtalo más adelante");
+  useEffect(() => {
+    if (!categoryId) {
+      setListaProductos(ProductList);
+    } else {
+      let productosFiltrados = ProductList.filter(
+        (product) => product.categoryId === categoryId
+      );
+      setListaProductos(productosFiltrados);
     }
-  };
+  }, [categoryId]);
 
   return (
     <div className="ItemList">
-      <button className="showMovies" onClick={catalogoPeliculas}>Mostrar películas</button>
-      <div>
-        {listaPeliculas.length > 0 ? (
-          listaPeliculas.map((props) => <Item peliculas={props} />)
+      <div className="movieList">
+        {listaProductos.length > 0 ? (
+          listaProductos.map((props) => (
+            <Item product={props} />
+          ))
         ) : (
           <p></p>
         )}
-        
       </div>
     </div>
   );
