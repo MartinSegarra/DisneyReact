@@ -1,25 +1,7 @@
 import "./ItemCount.css";
 import { useState } from "react";
 
-export const ItemCount = ({ stock, initial }) => {
-  const [number, setNumber] = useState(initial);
-
-  function onAdd() {
-    if (number < stock) {
-      setNumber(number + 1);
-    } else {
-      setNumber(stock);
-    }
-  }
-
-  function onSubstract() {
-    if (number > initial) {
-      setNumber(number - 1);
-    } else {
-      setNumber(initial);
-    }
-  }
-
+export const ItemCount = ({ stock, number, onAdd, onSubstract, finalizePurchase }) => {
   return (
     <div className="ItemCount">
       <button className="AddSubstractButtons" onClick={onSubstract}>
@@ -30,6 +12,7 @@ export const ItemCount = ({ stock, initial }) => {
         +
       </button>
       <p className="StockNumber">Stock disponible: {stock}</p>
+      <button onClick={finalizePurchase}>Agregar {number} al carrito</button>
     </div>
   );
 };
