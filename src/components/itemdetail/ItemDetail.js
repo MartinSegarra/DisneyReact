@@ -1,14 +1,15 @@
 import "./ItemDetail.css";
+import { CartContext } from "../../context/CartContext";
 import { ItemCount } from "../itemcount/ItemCount";
-import { useParams } from "react-router-dom";
-import { useState } from "react";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
+import { useState, useContext, useEffect } from "react";
 
 export const ItemDetail = ({ props }) => {
-  const [number, setNumber] = useState(1);
+  const {number, setNumber, addToCart} = useContext(CartContext);
   const [mostrarBoton, setMostrarBoton] = useState(true);
 
-  function onAdd() {
+
+  function onPlus() {
     if (number < props.stock) {
       setNumber(number + 1);
     } else {
@@ -24,9 +25,13 @@ export const ItemDetail = ({ props }) => {
     }
   }
 
-  function finalizePurchase() {
+  function onAdd() {
+    addToCart(props);
     setMostrarBoton(false);
   }
+
+  useEffect (() => {setNumber (1) }, [])
+
 
   return (
     <div className="ItemDetail">
@@ -41,20 +46,21 @@ export const ItemDetail = ({ props }) => {
         }
       ></img>
       <div>
-       {
-        mostrarBoton ? 
-           (<ItemCount
+        {mostrarBoton ? (
+          <ItemCount
             stock={props.stock}
             initial={1}
-            onAdd={onAdd}
+            onPlus={onPlus}
             onSubstract={onSubstract}
             number={number}
-            finalizePurchase={finalizePurchase}
-          />) 
-           : (<button className="finalizePurchase"><Link to='/cart/'>Finalizar compra </Link></button>)
-        }
-        </div>
-      
+            onAdd={onAdd}
+          />
+        ) : (
+          <button className="finalizePurchase">
+            <Link to="/cart/">Finalizar compra </Link>
+          </button>
+        )}
+      </div>
     </div>
   );
 };

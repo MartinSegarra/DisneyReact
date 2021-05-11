@@ -1,0 +1,49 @@
+
+.CartListContainer {
+    padding: 30px;
+    text-align: center;
+}
+
+.Cart {
+    text-align: center;
+    margin-top:50px;
+    
+    
+}
+
+.showMovies {
+    margin-top: "300x";
+    
+    
+}
+
+.cartList {
+    position: relative;
+	display: flex;
+	flex-flow: row wrap;
+    
+}
+
+.cartDetail {
+    text-align: center;
+    box-sizing: border-box;
+	padding: 20px;
+	outline: 2px solid black;
+	flex: 1;
+    margin: 5px 5px;
+    width:auto;
+    height: auto;
+    
+}
+
+.clearCartButton {
+    text-align: center;
+    box-sizing: border-box;
+	padding: 20px;
+	
+	flex: 1;
+    margin: 5px 5px;
+    width:auto;
+    height: auto;
+
+}

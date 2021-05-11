@@ -29,7 +29,7 @@ export const ItemList = () => {
             <Item product={props} />
           ))
         ) : (
-          <p></p>
+          <p>Estamos buscando tus productos</p>
         )}
       </div>
     </div>
