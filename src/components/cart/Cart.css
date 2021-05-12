@@ -1,49 +1,56 @@
-
 .CartListContainer {
-    padding: 30px;
-    text-align: center;
+  padding: 30px;
+  text-align: center;
 }
 
 .Cart {
-    text-align: center;
-    margin-top:50px;
-    
-    
+  text-align: center;
+  margin-top: 50px;
 }
 
 .showMovies {
-    margin-top: "300x";
-    
-    
+  margin-top: "300x";
 }
 
 .cartList {
-    position: relative;
-	display: flex;
-	flex-flow: row wrap;
-    
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
 }
 
 .cartDetail {
-    text-align: center;
-    box-sizing: border-box;
-	padding: 20px;
-	outline: 2px solid black;
-	flex: 1;
-    margin: 5px 5px;
-    width:auto;
-    height: auto;
-    
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20px;
+  outline: 2px solid black;
+  flex: 1;
+  margin: 5px 5px;
+  width: auto;
+  height: auto;
 }
 
 .clearCartButton {
-    text-align: center;
-    box-sizing: border-box;
-	padding: 20px;
-	
-	flex: 1;
-    margin: 5px 5px;
-    width:auto;
-    height: auto;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20px;
+  flex: 1;
+  margin: 5px 5px;
+  width: auto;
+  height: auto;
+}
 
+.totalPrice {
+  padding: 30px;
+  text-align: center;
+}
+
+.noProducts {
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.backToHome {
+  margin: 2rem;
 }

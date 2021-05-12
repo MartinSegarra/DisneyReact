@@ -4,36 +4,27 @@
   align-items: center;
   justify-content: space-between;
   margin: 10px;
-  
-
 }
 .logo {
   width: 12%;
   padding-left: 10px;
-  
- 
 }
 
 .navigationLinks {
-
   display: flex;
   list-style-type: none;
-  padding: 0 25px;
-
+  padding: 0 50px;
 }
 
 .navLink {
- 
   margin: 0 40px;
-  
-} 
-
-a {
-
-  text-decoration: none;
-  color:#006e99;
 }
 
-.activeLink{
+a {
+  text-decoration: none;
+  color: #006e99;
+}
+
+.activeLink {
   text-decoration: underline;
 }
