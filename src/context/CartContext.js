@@ -12,9 +12,11 @@ export const CartProvider = ({ children }) => {
 
   const addToCart = (item) => {
     if (isInCart(item.id)) {
-      setNumber(item.quantity+=number)
+      const newCart = [...cart]
+      newCart.forEach((p) => { (p.id === item.id) && ( p.quantity = p.quantity + number)})
+       setCart(newCart)
     } else {
-      item.quantity = number
+      item.quantity = number;
       setCart([...cart, item]);
     }
   };
@@ -29,29 +31,29 @@ export const CartProvider = ({ children }) => {
   };
 
   const isInCart = (id) => {
-    return cart.find((item) => id === item.id);
+    return cart.some((item) => id === item.id);
   };
 
   const totalProductPrice = (item) => {
-    return item.quantity*item.price
-  }
+    return item.quantity * item.price;
+  };
 
   const totalCartPrice = (cart) => {
-    return cart.map(p => p.price * p.quantity).reduce((a,b) => a + b)
-  }
+    return cart.map((p) => totalProductPrice(p)).reduce((a, b) => a + b);
+  };
 
   return (
     <CartContext.Provider
       value={{
         cart,
         number,
-        setNumber, 
+        setNumber,
         addToCart,
         removeFromCart,
         quantityCount,
         clearCart,
         totalProductPrice,
-        totalCartPrice
+        totalCartPrice,
       }}
     >
       {children}

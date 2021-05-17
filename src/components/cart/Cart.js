@@ -7,7 +7,7 @@ import { ItemDetailContainer} from '../itemdetailcontainer/ItemDetailContainer'
 export const Cart = () => {
   const { cart, removeFromCart, clearCart, totalProductPrice, totalCartPrice } = useContext(CartContext);
 
-  console.log(cart);
+ 
 
   return (
     <div className="CartListContainer">
@@ -23,8 +23,6 @@ export const Cart = () => {
                 <img
                   src={
                     props.image
-                      ? require(`../../img/products/${props.image}`).default
-                      : ""
                   }
                 ></img>
                 <p>Cantidad en el carrito: {props.quantity}</p>
@@ -48,7 +46,7 @@ export const Cart = () => {
               <button onClick={clearCart}>Limpiar carrito</button>
             </div>
           ) : (
-            <p></p>
+            <></>
           )}
         </div>
       </div>

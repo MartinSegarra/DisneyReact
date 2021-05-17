@@ -10,7 +10,7 @@ export const Peliculas = () => {
 
   const {categoryID} = useParams()
 
-  console.log(categoryID)
+
 
   
 

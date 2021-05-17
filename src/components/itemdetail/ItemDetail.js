@@ -41,8 +41,6 @@ export const ItemDetail = ({ props }) => {
       <img
         src={
           props.image
-            ? require(`../../img/products/${props.image}`).default
-            : ""
         }
       ></img>
       <div>

@@ -28,6 +28,9 @@ export const NavBar = () => {
             <li >
               <NavLink activeClassName="activeLink" className="navLink" to='/category/merchandising'>Merchandising</NavLink>
             </li>
+            <li >
+              <NavLink activeClassName="activeLink" className="navLink" to='/category/parques'>Parques</NavLink>
+            </li>
             <li>
             <CartWidget></CartWidget>
             </li >

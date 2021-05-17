@@ -1,36 +1,44 @@
 import "./ItemList.css";
-import { useState } from "react";
-import { Item } from "../item/Item";
-import { ProductList } from "../productlist/ProductList";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useEffect } from "react";
+import { Item } from "../item/Item";
+import { getFirestore } from "../../firebase";
 
 export const ItemList = () => {
   let { categoryId } = useParams();
 
-  const [listaProductos, setListaProductos] = useState([]);
+  const [items, setItems] = useState([]);
+  const [categoryExists, setCategoryExists] = useState(false)
 
-  useEffect(() => {
-    if (!categoryId) {
-      setListaProductos(ProductList);
-    } else {
-      let productosFiltrados = ProductList.filter(
+  useEffect( () => {
+    const db = getFirestore();
+    const ItemCollection = db.collection("items");
+     ItemCollection.get()
+      .then((querySnapshot) => {
+      const data = querySnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+
+      setCategoryExists(true)
+
+      const filteredData = data.filter(
         (product) => product.categoryId === categoryId
       );
-      setListaProductos(productosFiltrados);
-    }
-  }, [categoryId]);
+
+      {(!categoryId) ? (setItems(data)) : (setItems(filteredData))}})}, [categoryId])
 
   return (
     <div className="ItemList">
       <div className="movieList">
-        {listaProductos.length > 0 ? (
-          listaProductos.map((props) => (
-            <Item product={props} />
-          ))
+      {categoryExists ? ( items.length>0 ? (
+          items.map((props) => <Item product={props} />)
+          
         ) : (
-          <p>Estamos buscando tus productos</p>
-        )}
+          <p>Lo sentimos, no tenemos productos de esa categoría</p>
+        )) : (<> </>)}
+
+       
       </div>
     </div>
   );
