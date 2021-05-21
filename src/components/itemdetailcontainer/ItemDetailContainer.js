@@ -2,9 +2,7 @@ import "./ItemDetailContainer.css";
 import { useState } from "react";
 import { ItemDetail } from "../itemdetail/ItemDetail";
 import { useParams } from "react-router-dom";
-import { ProductList } from "../productlist/ProductList";
 import { useEffect, useContext } from "react";
-import { Item } from "../item/Item";
 import { getFirestore } from "../../firebase";
 import {CartContext} from '../../context/CartContext'
 

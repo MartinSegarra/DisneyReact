@@ -10,6 +10,7 @@ export const Item = (props) => {
       <h3>{props.product.price}$</h3>
       <img className="productImage"
         src={props.product.image}
+        alt={props.title}
       ></img>
       <h4>{props.product.description}</h4>
       <button>

@@ -12,9 +12,11 @@ export const CartProvider = ({ children }) => {
 
   const addToCart = (item) => {
     if (isInCart(item.id)) {
-      const newCart = [...cart]
-      newCart.forEach((p) => { (p.id === item.id) && ( p.quantity = p.quantity + number)})
-       setCart(newCart)
+      const newCart = [...cart];
+      newCart.forEach((p) => {
+        p.id === item.id && (p.quantity = p.quantity + number);
+      });
+      setCart(newCart);
     } else {
       item.quantity = number;
       setCart([...cart, item]);
@@ -42,6 +44,26 @@ export const CartProvider = ({ children }) => {
     return cart.map((p) => totalProductPrice(p)).reduce((a, b) => a + b);
   };
 
+  function addQuantity(item) {
+    if (item.quantity < item.stock) {
+      const newCart = [...cart];
+      newCart.forEach((p) => {
+        p.id === item.id && (p.quantity = p.quantity + 1);
+      });
+      setCart(newCart);
+    }
+  }
+
+  function removeQuantity(item) {
+    if (item.quantity > 1) {
+      const newCart = [...cart];
+      newCart.forEach((p) => {
+        p.id === item.id && (p.quantity = p.quantity - 1);
+      });
+      setCart(newCart);
+    }
+  }
+
   return (
     <CartContext.Provider
       value={{
@@ -54,6 +76,8 @@ export const CartProvider = ({ children }) => {
         clearCart,
         totalProductPrice,
         totalCartPrice,
+        addQuantity,
+        removeQuantity,
       }}
     >
       {children}

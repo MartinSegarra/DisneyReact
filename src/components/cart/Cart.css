@@ -54,3 +54,19 @@
 .backToHome {
   margin: 2rem;
 }
+
+
+.ItemCount {
+
+  display: flex;
+  list-style-type: none;
+  padding: 40px 25px;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.productImage {
+  height: 400px;
+  width: 400px}

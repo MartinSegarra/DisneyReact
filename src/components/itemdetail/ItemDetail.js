@@ -30,7 +30,7 @@ export const ItemDetail = ({ props }) => {
     setMostrarBoton(false);
   }
 
-  useEffect (() => {setNumber (1) }, [])
+  useEffect (() => {setNumber(1) }, [])
 
 
   return (
@@ -42,6 +42,7 @@ export const ItemDetail = ({ props }) => {
         src={
           props.image
         }
+        alt={props.title}
       ></img>
       <div>
         {mostrarBoton ? (
@@ -55,7 +56,7 @@ export const ItemDetail = ({ props }) => {
           />
         ) : (
           <button className="finalizePurchase">
-            <Link to="/cart/">Finalizar compra </Link>
+            <Link to="/cart/">Ir al carrito</Link>
           </button>
         )}
       </div>

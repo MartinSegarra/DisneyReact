@@ -1,5 +1,4 @@
 import "./ItemListContainer.css";
-import { Product } from "../product/Product";
 
 import { ItemList } from "../itemlist/ItemList";
 
