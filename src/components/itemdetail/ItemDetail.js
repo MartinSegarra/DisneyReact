@@ -5,25 +5,9 @@ import { Link } from "react-router-dom";
 import { useState, useContext, useEffect } from "react";
 
 export const ItemDetail = ({ props }) => {
-  const {number, setNumber, addToCart} = useContext(CartContext);
+  const {number, setNumber, addToCart, onPlus, onSubstract} = useContext(CartContext);
   const [mostrarBoton, setMostrarBoton] = useState(true);
 
-
-  function onPlus() {
-    if (number < props.stock) {
-      setNumber(number + 1);
-    } else {
-      setNumber(props.stock);
-    }
-  }
-
-  function onSubstract() {
-    if (number > 1) {
-      setNumber(number - 1);
-    } else {
-      setNumber(1);
-    }
-  }
 
   function onAdd() {
     addToCart(props);
@@ -49,7 +33,7 @@ export const ItemDetail = ({ props }) => {
           <ItemCount
             stock={props.stock}
             initial={1}
-            onPlus={onPlus}
+            onPlus={() => onPlus(props)}
             onSubstract={onSubstract}
             number={number}
             onAdd={onAdd}

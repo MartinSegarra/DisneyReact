@@ -8,6 +8,12 @@
   
   }
 
+  .StockNumber {
+ 
+    margin: 40px;
+    align-items: center;
+    
+  } 
 
   .AddSubstractButtons {
     text-align: center;

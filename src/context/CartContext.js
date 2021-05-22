@@ -44,6 +44,22 @@ export const CartProvider = ({ children }) => {
     return cart.map((p) => totalProductPrice(p)).reduce((a, b) => a + b);
   };
 
+  function onPlus(item) {
+    if (number < item.stock) {
+      setNumber(number + 1);
+    } else {
+      setNumber(item.stock);
+    }
+  }
+
+  function onSubstract() {
+    if (number > 1) {
+      setNumber(number - 1);
+    } else {
+      setNumber(1);
+    }
+  }
+
   function addQuantity(item) {
     if (item.quantity < item.stock) {
       const newCart = [...cart];
@@ -78,6 +94,8 @@ export const CartProvider = ({ children }) => {
         totalCartPrice,
         addQuantity,
         removeQuantity,
+        onPlus,
+        onSubstract,
       }}
     >
       {children}
