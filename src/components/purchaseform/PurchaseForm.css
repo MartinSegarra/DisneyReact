@@ -1,0 +1,22 @@
+.PurchaseForm{
+    padding: 50px;
+    margin: 50px;
+}
+
+.label{
+    padding: 30px;
+    margin: 30px;
+}
+
+.input-text js-input{
+    padding: 30px;
+    margin: 30px;
+}
+
+.submit-btn {
+    margin: 25px;
+}
+
+.backToHome {
+    margin:25px;
+}

@@ -5,6 +5,7 @@ import { ItemDetailContainer } from "./components/itemdetailcontainer/ItemDetail
 import { Cart } from "./components/cart/Cart";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { CartProvider } from "../src/context/CartContext";
+import { PurchaseForm } from "../src/components/purchaseform/PurchaseForm"
 
 
 function App() {
@@ -26,6 +27,9 @@ function App() {
           </Route>
           <Route path="/cart">
             <Cart />
+          </Route>
+          <Route path="/purchase">
+            <PurchaseForm />
           </Route>
         </Switch>
         <footer></footer>

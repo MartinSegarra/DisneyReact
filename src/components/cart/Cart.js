@@ -3,6 +3,7 @@ import { CartContext } from "../../context/CartContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartCount } from '../cartcount/CartCount'
+import {PurchaseForm} from '../purchaseform/PurchaseForm'
 
 export const Cart = () => {
   const { cart, removeFromCart, clearCart, totalProductPrice, totalCartPrice} =
@@ -44,6 +45,7 @@ export const Cart = () => {
               <h2 className="totalPrice">
                 Tu precio a pagar es {totalCartPrice(cart)}$
               </h2>
+              <button><Link to="/purchase">Finalizar compra</Link></button>
               <button onClick={clearCart}>Limpiar carrito</button>
             </div>
           ) : (

@@ -3,7 +3,9 @@ import "./ItemCount.css";
 
 export const ItemCount = ({ stock, number, onAdd, onSubstract, onPlus }) => {
   return (
-    <div className="ItemCount">
+
+    <> 
+    { stock >0 ? (<div className="ItemCount">
       <button className="AddSubstractButtons" onClick={onSubstract}>
         -
       </button>
@@ -13,6 +15,8 @@ export const ItemCount = ({ stock, number, onAdd, onSubstract, onPlus }) => {
       </button>
       <p className="StockNumber">Stock disponible: {stock}</p>
       <button onClick={onAdd}>Agregar {number} al carrito</button>
-    </div>
+    </div>) : (<p>Lo sentimos, no hay stock de ese producto</p>)} 
+    
+    </>
   );
 };
