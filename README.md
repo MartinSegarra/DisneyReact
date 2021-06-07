@@ -13,7 +13,7 @@ El proyecto es un sitio que actúa como un e-commerce de **Disney**, incluyendo 
 Los productos provienen de **Firestore** y su stock se actualiza en tiempo real. Para grabar la compra, el usuario llena un formulario con sus datos y la orden queda guardada en una colección aparte.
 
 <p align='center'>
-<img src='./proyecto-final/src/animations/animation.gif' height='auto' width='600' alt='demo'>
+<img src='https://gifyu.com/image/oFw0' alt='demo'>
 </p>
 
   
