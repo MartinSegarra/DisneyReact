@@ -1,9 +1,59 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+body{background-color: lightblue }
+
 .ItemDetail {
-    text-align: center;
-    padding: 2rem;
+  background-color: lightblue;
+  
+}
+
+.productImage{
+    width:auto;
+    height: 600px;
+    object-fit: scale-down;
 }
 
 .finalizePurchase {
-
+    font-family: "Lato", sans-serif;
     margin-top: 2rem;
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+    color: white;
 }
+ 
+
+ .productTitle{
+    font-family: "Lato", sans-serif;
+    font-size: 2.5rem;
+    padding-bottom: 15px;
+    color: #006e99;
+ }
+
+ .productPrice {
+    font-family: "Lato", sans-serif;
+    padding-bottom: 30px;
+    color: #006e99;
+
+ }
+
+
+ .productDescription {
+    font-family: "Lato", sans-serif;
+    font-size: 1.5rem;
+    padding-bottom: 15px;
+    color: white;
+   
+ }
+ 
+
+ 
+#page-content {
+	flex: 1 0 auto;
+  }
+  
+  #sticky-footer {
+	flex-shrink: none;
+  }
+  

@@ -1,8 +1,20 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
 .ItemListContainer {
     padding: 30px;
     text-align: center;
+    background-color: lightblue;
 }
 
 body {
     overflow-x: hidden; /* Hide horizontal scrollbar */
   }
+
+  .welcome {
+      color: #006e99;
+      font-family: "Lato", sans-serif;
+      padding-bottom: 20px;
+    }

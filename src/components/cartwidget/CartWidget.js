@@ -8,16 +8,9 @@ export const CartWidget = () => {
   const { cart, quantityCount } = useContext(CartContext);
 
   return (
-    <>
-      {cart.length > 0 ? (
-        <>
           <NavLink to="/cart">
-            <FontAwesomeIcon icon={faShoppingCart} />({quantityCount()})
+            <FontAwesomeIcon icon={faShoppingCart}/> <>{cart.length> 0 ? (`(${quantityCount()})`): (<></>)}</>
           </NavLink>
-        </>
-      ) : (
-        <></>
-      )}
-    </>
+     
   );
 };

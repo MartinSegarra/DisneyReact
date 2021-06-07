@@ -1,6 +1,5 @@
 .ItemCount {
-
-    display: flex;
+    display: none;
     list-style-type: none;
     padding: 40px 25px;
     align-items: center;
@@ -18,3 +17,5 @@
   .AddSubstractButtons {
     text-align: center;
   }
+
+ 

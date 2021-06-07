@@ -1,30 +1,95 @@
-.header {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-  margin: 10px;
-}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
 .logo {
-  width: 12%;
+  width: 25%;
   padding-left: 10px;
 }
 
-.navigationLinks {
-  display: flex;
-  list-style-type: none;
-  padding: 0 50px;
+  nav {
+  width: 100%;
+  height: 100%;
+  padding: 150px;
+  margin: 0px;
+  background-color: #006e99;
+  border-bottom: solid 3px white;
 }
-
-.navLink {
-  margin: 0 40px;
-}
-
-a {
+.navItem {
+  font-family: "Lato", sans-serif;
+  font-size: 1.25rem;
   text-decoration: none;
-  color: #006e99;
+  list-style-type: none;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+/* Animación hover */
+
+.snip1217 a {
+  padding: 0.3em 0;
+  color: #fff;
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  
+}
+.snip1217 a:before {
+  height: 3px;
+  position: absolute;
+  content: '';
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  background-color: white;
+  width: 0;
+  top: 0;
+  left: 0;
+  
+}
+.snip1217 a:after {
+  height: 3px;
+  position: absolute;
+  content: '';
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  background-color: white;
+  width: 0;
+  bottom: 0;
+  right: 0;
+
+  
+}
+.snip1217 a:hover {
+  color: #fff;
+  
+}
+.snip1217 a:hover:before {
+  width: 100%;
+  
+}
+.snip1217 a:hover:after {
+  width: 100%;
+  
+}
+.snip1217 .current a {
+  color: #fff;
+ 
+}
+.snip1217 .current a:before {
+  color: #fff;
+  width: 100%;
+  
+}
+.snip1217 .current a:after {
+  color: #fff;
+  width: 100%;
+  
+  
 }
 
 .activeLink {
-  text-decoration: underline;
+  font-weight: 700;
 }

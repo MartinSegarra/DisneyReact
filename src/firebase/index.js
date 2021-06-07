@@ -1,14 +1,14 @@
-import firebase from "firebase";
+import firebase from "firebase/app";
 import "firebase/firestore"
 
 const app = firebase.initializeApp({
-  apiKey: "AIzaSyAJTjzEkcFLY0qTN8-Bsm3GnmKzLdS-194",
-  appId: "1:728101603544:web:02d4d2a57fcc8109b16fad",
-  authDomain: "disneystore---reactjs.firebaseapp.com",
-  measurementId: "G-EP84KNQ0NB",
-  messagingSenderId: "728101603544",
-  projectId: "disneystore---reactjs",
-  storageBucket: "disneystore---reactjs.appspot.com",
+  apiKey: process.env.REACT_APP_FIRESTORE_API_KEY,
+  appId: process.env.REACT_APP_FIRESTORE_APP_ID,
+  authDomain: process.env.REACT_APP_FIRESTORE_AUTH_DOMAIN,
+  measurementId: process.env.REACT_APP_FIRESTORE_MEASUREMENT_ID,
+  messagingSenderId: process.env.REACT_APP_FIRESTORE_MESSAGING_SENDER_ID,
+  projectId: process.env.REACT_APP_FIRESTORE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIRESTORE_STORAGE_BUCKET
 });
 
 export const getFirebase = () => app

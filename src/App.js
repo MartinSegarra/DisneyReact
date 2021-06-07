@@ -1,7 +1,9 @@
 import React from "react";
 import { NavBar } from "./components/navbar/NavBar";
+import { Footer } from "./components/footer/Footer"
 import { ItemListContainer } from "./components/itemlistcontainer/ItemListContainer";
 import { ItemDetailContainer } from "./components/itemdetailcontainer/ItemDetailContainer";
+import { Category } from "./pages/category/Category"
 import { Cart } from "./components/cart/Cart";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { CartProvider } from "../src/context/CartContext";
@@ -20,7 +22,7 @@ function App() {
             <ItemListContainer />
           </Route>
           <Route path="/category/:categoryId">
-            <ItemListContainer />
+            <Category />
           </Route>
           <Route path="/item/:productId">
             <ItemDetailContainer />
@@ -32,7 +34,7 @@ function App() {
             <PurchaseForm />
           </Route>
         </Switch>
-        <footer></footer>
+        <Footer />
       </CartProvider>
     </BrowserRouter>
   );

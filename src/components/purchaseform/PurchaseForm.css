@@ -1,22 +1,100 @@
-.PurchaseForm{
-    padding: 50px;
-    margin: 50px;
-}
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
-.label{
+
+form {
     padding: 30px;
-    margin: 30px;
+  }
+  .get-in-touch {
+    max-width: 800px;
+    margin: 50px auto;
+    position: relative;
+    padding-top: 30px;
+  }
+  .get-in-touch .title {
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 2em;
+    line-height: 48px;
+    padding-bottom: 48px;
+    font-family: "Lato", sans-serif;
+    color: white;
+  }
+  .contact-form .form-field {
+    position: sticky;
+    margin: 32px 0;
+  }
+  .contact-form .input-text {
+    display: block;
+    color: white;
+    width: 100%;
+    height: 36px;
+    border-width: 0 0 2px 0;
+    border-color: white;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    background: transparent;
+  }
+  .contact-form .input-text:focus {
+    outline: none;
+  }
+  .contact-form .input-text:focus + .label, .contact-form .input-text:valid + .label, .contact-form .input-text.not-empty + .label {
+    -webkit-transform: translateY(-24px);
+    transform: translateY(-24px);
+  }
+  .contact-form .label {
+    position: absolute;
+    left: 20px;
+    bottom: 11px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    color: white;
+    cursor: text;
+    transition: -webkit-transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  }
+  .contact-form .submit-btn {
+    display: inline-block;
+    background-color: #006e99;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    padding: 8px 16px;
+    width: 200px;
+    cursor: pointer;
+    font-family: "Lato", sans-serif;
+  }
+  .button {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    font-family: "Lato", sans-serif;
+    text-decoration: none
+  }
+  
+
+  .thankYouPage {
+    background-color: lightblue;
+    padding-top: 50px;
 }
 
-.input-text js-input{
+.thankYouText {
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-size: 4rem;
     padding: 30px;
-    margin: 30px;
 }
 
-.submit-btn {
-    margin: 25px;
+.thankYouMessage {
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-size: 2rem;
+    padding-bottom: 20px;
 }
 
 .backToHome {
-    margin:25px;
+    color: red
 }

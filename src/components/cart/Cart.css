@@ -49,10 +49,9 @@
   width: 100%;
   text-align: center;
   box-sizing: border-box;
-}
-
-.backToHome {
-  margin: 2rem;
+  padding-top: 0px;
+  padding-bottom: 10px;
+  text-decoration: none;
 }
 
 
@@ -70,3 +69,45 @@
 .productImage {
   height: 400px;
   width: 400px}
+
+  .noProducts {
+    padding-top: 20px;
+    text-decoration: none;
+    font-size: 1.5rem;
+   
+  }
+
+
+  .noProducts a {
+    text-decoration: none;
+    color: black
+   
+  }
+
+  .noProductsButton{
+    margin-top: 20px;
+}
+
+
+.yourCart {
+  padding-top: 20px;
+    text-decoration: none;
+    font-size: 3rem;
+    color: #006e99;
+  
+}
+
+.table td, .table th {
+  border-top: none;
+}
+
+.yourCart2 {
+    text-decoration: none;
+    font-size: 2.5rem;
+    color: #006e99;
+    padding-bottom: 20px
+}
+
+.subtotal {
+  margin-top: 30px;
+}
